@@ -130,10 +130,8 @@ def writetofile(key):
                     f.seek(f.tell() - 2, 0) 
                     f.truncate()
             elif k=="Key.backspace":
-                fs=os.path.getsize(file)
-                if(fs!=0):  #if file is not empty
-                    a=f.seek(f.tell() - 1, os.SEEK_SET)
-                    f.truncate()
+                a=f.seek(f.tell() - 1, os.SEEK_SET)
+                f.truncate()
             elif(k in d.keys()):
                 f.write(d[k])
             elif k.find("Key")==-1:
@@ -200,11 +198,6 @@ def main():
                 elif rpswd=="":
                         tk.Label(frame2,text="Re enter the password",fg="red").place(x=80,y=350)       #LABEL--WARNING
                 else:
-                        if(not (os.path.isfile(name_id) and not(os.path.isfile(pswd_id)))):
-                                    f=open(name_id,"w")
-                                    f.close()
-                                    f=open(pswd_id,"w")
-                                    f.close()
                         if(pswd==rpswd):
                            files()
                            if user not in name_list:
